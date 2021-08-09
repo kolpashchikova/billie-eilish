@@ -1,6 +1,4 @@
-text3_v <- scan("data/text/billie.txt", what = "character", sep = "\n")
-text3_v <- paste(text3_v, collapse = " ")
-text3_v <- tolower(text3_v)
+text3_v <- tolower(paste(scan("data/text/billie.txt", what = "character", sep = "\n"), collapse = " "))
 text3_words_l <- strsplit(text3_v,"[^A-Za-z0-9']")
 text3_word_v <- unlist(text3_words_l)
 not_blanks_v <- which(text3_word_v != " ") # getting rid of blanks
